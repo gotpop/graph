@@ -10,6 +10,8 @@ const typeDefs = gql`
     }
 
     type Query {
-        users: [Users!]!
+        users: [User!]!
     }
 `
+
+module.exports = { typeDefs }
