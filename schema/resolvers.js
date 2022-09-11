@@ -18,12 +18,16 @@ const resolvers = {
             return MovieList
         },
         movie: (parent, args) => {
-        console.log('args :', args);
             const name = args.name
             const movie = _.find(MovieList, { name });
             
             return movie;
         },
+    },
+    User: {
+        favouriteMovies: () => {
+            
+        }
     }
 
 }
