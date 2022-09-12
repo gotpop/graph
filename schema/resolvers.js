@@ -51,8 +51,6 @@ const resolvers = {
                 }
             })
 
-            console.log(UserList, "YO")
-
             return userUpdated
         },
         deleteUser: (parent, args) => {
