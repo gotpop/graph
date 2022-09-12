@@ -1,9 +1,9 @@
-const { ApolloServer } = require("apollo-server");
-const { typeDefs } = require("./schema/type-defs");
-const { resolvers } = require("./schema/resolvers");
+const { ApolloServer } = require("apollo-server")
+const { typeDefs } = require("./schema/type-defs")
+const { resolvers } = require("./schema/resolvers")
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers })
 
 server.listen().then(({url})=> {
-    console.log(`You API is running on: ${url}`);
-});
+    console.log(`You API is running on: ${url}`)
+})
