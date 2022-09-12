@@ -35,7 +35,6 @@ const typeDefs = gql`
     input UpdateUserNameInput {
         id: ID!
         newUsername: String!
-
     }
 
     type Mutation {
