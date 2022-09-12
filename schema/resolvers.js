@@ -1,5 +1,5 @@
-const { UserList, MovieList } = require("../Fake-data");
-const _ = require("lodash");
+const { UserList, MovieList } = require("../FakeData")
+const _ = require("lodash")
 
 const resolvers = {
     Query: {
@@ -9,9 +9,9 @@ const resolvers = {
         },
         user: (parent, args) => {
             const id = args.id
-            const user = _.find(UserList, { id: Number(id) });
+            const user = _.find(UserList, { id: Number(id) })
 
-            return user;
+            return user
         },
         // Movie  resolvers
         movies: () => {
@@ -19,9 +19,9 @@ const resolvers = {
         },
         movie: (parent, args) => {
             const name = args.name
-            const movie = _.find(MovieList, { name });
+            const movie = _.find(MovieList, { name })
 
-            return movie;
+            return movie
         },
     },
     // Link queries
@@ -30,7 +30,7 @@ const resolvers = {
             return _.filter(MovieList, (movie) => movie.yearOfPublication >= 2000 && movie.yearOfPublication <= 2010)
         }
     },
-
+    // Mutations
     Mutation: {
         createUser: (parent, args) => {
             const user = args.input
@@ -42,18 +42,18 @@ const resolvers = {
             return user
         },
         updateUsername: (parent, args) => {
-            const { id, newUsername } = args.input;
-            let userUpdated;
+            const { id, newUsername } = args.input
+            let userUpdated
             UserList.forEach((user) => {
                 if (user.id === Number(id)) {
-                    user.username = newUsername;
-                    userUpdated = user;
+                    user.username = newUsername
+                    userUpdated = user
                 }
-            });
+            })
 
-            console.log(UserList, "YO");
+            console.log(UserList, "YO")
 
-            return userUpdated;
+            return userUpdated
         },
         deleteUser: (parent, args) => {
             const id = args.id
@@ -61,6 +61,6 @@ const resolvers = {
         }
     },
 
-};
+}
 
-module.exports = { resolvers };
+module.exports = { resolvers }

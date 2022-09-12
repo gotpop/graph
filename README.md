@@ -1,3 +1,5 @@
 # GQL
 
- http://localhost:4000
+Minimal GraphQl set up
+
+http://localhost:4000

@@ -1,19 +1,18 @@
 {
   "name": "graph",
   "version": "1.0.0",
-  "description": "",
+  "description": "Minimal GraphQl set up",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "build": "index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gotpop/graph.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "ISC", 
   "bugs": {
     "url": "https://github.com/gotpop/graph/issues"
   },
